@@ -1,197 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orthopediabogota — Dr. Arturo Corchuelo</title>
+  <meta name="description" content="Orthopedic & Knee Surgery in Bogotá led by Dr. Arturo Corchuelo. International patients program, accredited hospitals, guided recovery." />
+  <!-- Tailwind oficial (CDN que sí funciona en Vercel) -->
   <script src="https://cdn.tailwindcss.com"></script>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Orthopediabogota — Dr. Arturo Corchuelo</title>
-<meta name="description" content="Orthopedic & Knee Surgery in Bogotá led by Dr. Arturo Corchuelo. International patients program, accredited hospitals, guided recovery." />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandblue: '#004B8D',
+            brandgreen: '#1AAE9F',
+            soft: '#F5F7FA'
+          },
+          borderRadius: {
+            'xl2': '1rem'
+          }
+        }
+      }
+    }
+  </script>
 
-<!-- Iconos livianos en SVG inline -->
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="%23004B8D"/><stop offset="100%" stop-color="%231AAE9F"/></linearGradient></defs><rect width="64" height="64" rx="12" fill="url(%23g)"/><circle cx="40" cy="18" r="6" fill="white"/></svg>'/>
-<link rel="apple-touch-icon" sizes="180x180" href='data:image/svg+xml;utf8,
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="%23004B8D"/><stop offset="100%" stop-color="%231AAE9F"/></linearGradient></defs><rect x="8" y="8" width="164" height="164" rx="36" fill="url(%23g)"/><circle cx="120" cy="54" r="18" fill="white"/></svg>'/>
-
-<style>
-  :root{
-    --blue:#004B8D; --green:#1AAE9F; --soft:#F5F7FA;
-    --slate-900:#0f172a; --slate-800:#1e293b; --slate-700:#334155; --slate-600:#475569; --slate-500:#64748b; --border:#e5e7eb;
-    --max: 1120px;
-  }
-  *{box-sizing:border-box} html,body{margin:0;padding:0}
-  body{font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--slate-800);background:#fff}
-
-  /* Layout helpers */
-  .container{max-width:var(--max);margin:0 auto;padding:0 16px}
-  .grid{display:grid;gap:24px}
-  @media(min-width:880px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-5{grid-template-columns:repeat(5,1fr)} }
-
-  /* Header */
-  header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-  .nav{display:none;gap:24px;font-size:14px}
-  @media(min-width:880px){ .nav{display:flex} }
-  .nav a{color:var(--slate-600);text-decoration:none}
-  .nav a:hover{color:var(--slate-800)}
-  .logo-wrap{display:flex;align-items:center;gap:12px;padding:12px 0}
-  .logo{width:40px;height:40px;border-radius:8px;display:block}
-
-  /* Hero */
-  h1{margin:0;color:var(--blue);font-size:34px;line-height:1.15}
-  @media(min-width:880px){ h1{font-size:44px} }
-  p.lead{color:var(--slate-600);font-size:18px;margin-top:16px}
-  .btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600}
-  .btn-primary{background:var(--blue);color:#fff}
-  .btn-primary:hover{opacity:.9}
-  .btn-outline{border:2px solid var(--green);color:var(--slate-800)}
-  .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px}
-
-  .hero-showcase{background:#f8fafc;border-radius:20px;box-shadow:inset 0 0 0 1px var(--border);display:grid;place-items:center;aspect-ratio:4/3;padding:24px}
-
-  /* Sections */
-  section{padding:56px 0}
-  section.soft{background:var(--soft)}
-
-  /* Contact */
-  .contact{background:var(--blue);color:#fff}
-  .contact h2{margin:0 0 16px}
-  .input, .select, .textarea{width:100%;padding:12px 14px;border-radius:12px;border:none;background:#fff;color:#111}
-  .textarea{min-height:120px;resize:vertical}
-  .submit{background:var(--green);border:none;color:#0b1020;padding:12px 18px;border-radius:12px;font-weight:600;cursor:pointer}
-  .submit:hover{opacity:.9}
-
-  footer{background:#f3f4f6;color:var(--slate-600);text-align:center;padding:16px;font-size:14px;border-top:1px solid var(--border)}
-</style>
+  <!-- Favicon y Apple Touch en data URI (livianos) -->
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="%23004B8D"/><stop offset="100%" stop-color="%231AAE9F"/></linearGradient></defs>
+      <rect width="64" height="64" rx="12" fill="url(%23g)"/><circle cx="40" cy="18" r="6" fill="white"/>
+    </svg>'/>
+  <link rel="apple-touch-icon" sizes="180x180" href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="%23004B8D"/><stop offset="100%" stop-color="%231AAE9F"/></linearGradient></defs>
+      <rect x="8" y="8" width="164" height="164" rx="36" fill="url(%23g)"/><circle cx="120" cy="54" r="18" fill="white"/>
+    </svg>'/>
+  <style>
+    /* Ajustes mínimos adicionales */
+    .btn-primary { background:#004B8D; color:#fff; }
+    .btn-secondary { border:2px solid #1AAE9F; }
+  </style>
 </head>
-<body>
+<body class="bg-white text-slate-800">
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <!-- Icono/“logo” súper liviano en SVG -->
+        <svg class="w-10 h-10 rounded-md" viewBox="0 0 64 64" aria-label="Logo">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#004B8D"/><stop offset="100%" stop-color="#1AAE9F"/></linearGradient></defs>
+          <rect width="64" height="64" rx="12" fill="url(#g1)"/>
+          <circle cx="40" cy="18" r="6" fill="#fff"/>
+        </svg>
+        <div class="leading-4">
+          <div class="font-semibold text-brandblue">Dr. Arturo Corchuelo</div>
+          <div class="text-xs text-slate-500">Orthopedic & Knee Surgery</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:text-slate-900 text-slate-600">Services</a>
+        <a href="#process" class="hover:text-slate-900 text-slate-600">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900 text-slate-600">Pricing</a>
+        <a href="#contact" class="px-4 py-2 rounded-xl btn-primary hover:opacity-90">Free consult</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-    <a href="#home" class="logo-wrap">
-      <svg class="logo" viewBox="0 0 64 64" aria-label="Logo">
-        <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#004B8D"/><stop offset="100%" stop-color="#1AAE9F"/></linearGradient></defs>
-        <rect width="64" height="64" rx="12" fill="url(#g1)"/>
-        <circle cx="40" cy="18" r="6" fill="#fff"/>
-      </svg>
-      <div>
-        <div style="font-weight:600;color:var(--blue);line-height:1">Dr. Arturo Corchuelo</div>
-        <div style="font-size:12px;color:var(--slate-500);line-height:1">Orthopedic & Knee Surgery</div>
-      </div>
-    </a>
-    <nav class="nav">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="btn btn-primary">Free consult</a>
-    </nav>
-  </div>
-</header>
-
-<main id="home">
   <!-- HERO -->
-  <section>
-    <div class="container grid grid-2" style="align-items:center;">
-      <div>
-        <h1>World-class orthopedic surgery in Bogotá</h1>
-        <p class="lead">International patient program led by <strong>Dr. Arturo Corchuelo</strong>. Accredited hospitals, fixed quotes, and guided recovery.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
-          <a href="#contact" class="btn btn-primary">Book free video consult</a>
-          <a href="#services" class="btn btn-outline">Explore procedures</a>
+  <main id="home">
+    <section class="relative">
+      <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-semibold tracking-tight text-brandblue">
+            World-class orthopedic surgery in Bogotá
+          </h1>
+          <p class="mt-5 text-lg text-slate-600">
+            International patient program led by <strong>Dr. Arturo Corchuelo</strong>.
+            Accredited hospitals, fixed quotes, and guided recovery.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-xl btn-primary">Book free video consult</a>
+            <a href="#services" class="px-5 py-3 rounded-xl btn-secondary">Explore procedures</a>
+          </div>
+        </div>
+
+        <!-- Showcase -->
+        <div class="relative">
+          <div class="rounded-2xl shadow-inner w-full bg-slate-50 p-6 grid place-items-center aspect-[4/3]">
+            <svg viewBox="0 0 256 256" class="w-full h-full max-w-[520px]">
+              <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#004B8D"/><stop offset="100%" stop-color="#1AAE9F"/></linearGradient></defs>
+              <rect x="16" y="16" width="224" height="224" rx="36" fill="url(#g2)"/>
+              <circle cx="168" cy="70" r="18" fill="#fff"/>
+              <path d="M72 176c24-44 48-68 82-34 8 8 20 36 26 50h-34c-6-12-12-26-18-32-16-8-30 12-38 32H72z" fill="#fff" opacity=".94"/>
+            </svg>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="hero-showcase">
-          <svg viewBox="0 0 256 256" style="width:100%;max-width:520px;">
-            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#004B8D"/><stop offset="100%" stop-color="#1AAE9F"/></linearGradient></defs>
-            <rect x="16" y="16" width="224" height="224" rx="36" fill="url(#g2)"/>
-            <circle cx="168" cy="70" r="18" fill="#fff"/>
-            <path d="M72 176c24-44 48-68 82-34 8 8 20 36 26 50h-34c-6-12-12-26-18-32-16-8-30 12-38 32H72z" fill="#fff" opacity=".94"/>
-          </svg>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="bg-soft">
+      <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-6">
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="font-medium text-brandblue">Total knee replacement</div>
+          <div class="text-sm text-slate-600 mt-2">Modern implants & fast-track rehab (7–10 days).</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="font-medium text-brandblue">Total hip replacement</div>
+          <div class="text-sm text-slate-600 mt-2">Posterior/anterior approach as indicated.</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="font-medium text-brandblue">ACL & shoulder arthroscopy</div>
+          <div class="text-sm text-slate-600 mt-2">Minimally invasive with return-to-sport plan.</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="soft">
-    <div class="container grid grid-3">
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600">Total knee replacement</div>
-        <div style="color:var(--slate-600);font-size:14px;margin-top:8px">Modern implants & fast-track rehab (7–10 days).</div>
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-5 gap-4">
+        <div class="rounded-xl border border-slate-200 p-5"><div class="text-xs text-slate-500">1. Intake</div><div class="text-sm mt-1">Questionnaire + imaging upload.</div></div>
+        <div class="rounded-xl border border-slate-200 p-5"><div class="text-xs text-slate-500">2. Video consult</div><div class="text-sm mt-1">Plan & implant options.</div></div>
+        <div class="rounded-xl border border-slate-200 p-5"><div class="text-xs text-slate-500">3. Fixed quote</div><div class="text-sm mt-1">Transparent package price.</div></div>
+        <div class="rounded-xl border border-slate-200 p-5"><div class="text-xs text-slate-500">4. Surgery</div><div class="text-sm mt-1">Accredited hospital, bilingual team.</div></div>
+        <div class="rounded-xl border border-slate-200 p-5"><div class="text-xs text-slate-500">5. Recovery</div><div class="text-sm mt-1">Physio + tele-follow-ups.</div></div>
       </div>
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600">Total hip replacement</div>
-        <div style="color:var(--slate-600);font-size:14px;margin-top:8px">Posterior/anterior approach as indicated.</div>
-      </div>
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600">ACL & shoulder arthroscopy</div>
-        <div style="color:var(--slate-600);font-size:14px;margin-top:8px">Minimally invasive with return-to-sport plan.</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="container grid grid-5">
-      <div class="card"><div style="font-size:12px;color:var(--slate-500)">1. Intake</div><div style="font-size:14px;margin-top:6px">Questionnaire + imaging upload.</div></div>
-      <div class="card"><div style="font-size:12px;color:var(--slate-500)">2. Video consult</div><div style="font-size:14px;margin-top:6px">Plan & implant options.</div></div>
-      <div class="card"><div style="font-size:12px;color:var(--slate-500)">3. Fixed quote</div><div style="font-size:14px;margin-top:6px">Transparent package price.</div></div>
-      <div class="card"><div style="font-size:12px;color:var(--slate-500)">4. Surgery</div><div style="font-size:14px;margin-top:6px">Accredited hospital, bilingual team.</div></div>
-      <div class="card"><div style="font-size:12px;color:var(--slate-500)">5. Recovery</div><div style="font-size:14px;margin-top:6px">Physio + tele-follow-ups.</div></div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" class="soft">
-    <div class="container grid grid-3">
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600;font-size:18px">Knee replacement</div>
-        <div style="color:var(--green);font-weight:700;font-size:24px;margin-top:6px">US$15k–18k</div>
-        <ul style="margin:12px 0 0 0;padding-left:20px;color:var(--slate-600);font-size:14px">
-          <li>Surgeon + anesthesiologist</li><li>Implants & OR fees</li><li>7–10 nights hospital/hotel</li>
-        </ul>
+    <!-- PRICING -->
+    <section id="pricing" class="bg-soft">
+      <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-6">
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="text-lg font-medium text-brandblue">Knee replacement</div>
+          <div class="text-2xl font-semibold mt-2" style="color:#1AAE9F">US$15k–18k</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• Surgeon + anesthesiologist</li>
+            <li>• Implants & OR fees</li>
+            <li>• 7–10 nights hospital/hotel</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="text-lg font-medium text-brandblue">Hip replacement</div>
+          <div class="text-2xl font-semibold mt-2" style="color:#1AAE9F">US$15k–19k</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• Surgeon + anesthesiologist</li>
+            <li>• Implants & OR fees</li>
+            <li>• 7–10 nights hospital/hotel</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="text-lg font-medium text-brandblue">Arthroscopy (ACL/shoulder)</div>
+          <div class="text-2xl font-semibold mt-2" style="color:#1AAE9F">US$6k–9k</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>• Surgeon + anesthesiologist</li>
+            <li>• OR & materials</li>
+            <li>• 2–4 nights hotel</li>
+          </ul>
+        </div>
       </div>
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600;font-size:18px">Hip replacement</div>
-        <div style="color:var(--green);font-weight:700;font-size:24px;margin-top:6px">US$15k–19k</div>
-        <ul style="margin:12px 0 0 0;padding-left:20px;color:var(--slate-600);font-size:14px">
-          <li>Surgeon + anesthesiologist</li><li>Implants & OR fees</li><li>7–10 nights hospital/hotel</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div style="color:var(--blue);font-weight:600;font-size:18px">Arthroscopy (ACL/shoulder)</div>
-        <div style="color:var(--green);font-weight:700;font-size:24px;margin-top:6px">US$6k–9k</div>
-        <ul style="margin:12px 0 0 0;padding-left:20px;color:var(--slate-600);font-size:14px">
-          <li>Surgeon + anesthesiologist</li><li>OR & materials</li><li>2–4 nights hotel</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 style="font-size:28px;font-weight:700;margin:0 0 8px">Book your free video consult</h2>
-      <form class="grid" style="grid-template-columns:1fr;gap:12px;max-width:960px" method="post" action="https://formspree.io/f/your-form-id">
-        <input class="input" name="name" placeholder="Full name" required />
-        <input class="input" type="email" name="email" placeholder="Email" required />
-        <input class="input" name="phone" placeholder="Phone / WhatsApp" />
-        <select class="select" name="procedure">
-          <option>Procedure of interest</option>
-          <option>Knee replacement</option>
-          <option>Hip replacement</option>
-          <option>Shoulder arthroscopy</option>
-          <option>ACL reconstruction</option>
-          <option>Other / second opinion</option>
-        </select>
-        <textarea class="textarea" name="history" placeholder="Brief medical history / goals"></textarea>
-        <button class="submit" type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-</main>
+    <!-- CONTACT -->
+    <section id="contact" class="text-white" style="background:#004B8D;">
+      <div class="max-w-6xl mx-auto px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-semibold">Book your free video consult</h2>
+        <form class="mt-8 grid md:grid-cols-2 gap-4" method="post" action="https://formspree.io/f/your-form-id">
+          <input required name="name" placeholder="Full name" class="px-4 py-3 rounded-xl bg-white text-slate-900" />
+          <input required name="email" type="email" placeholder="Email" class="px-4 py-3 rounded-xl bg-white text-slate-900" />
+          <input name="phone" placeholder="Phone / WhatsApp" class="px-4 py-3 rounded-xl bg-white text-slate-900" />
+          <select name="procedure" class="px-4 py-3 rounded-xl bg-white text-slate-900">
+            <option>Procedure of interest</option>
+            <option>Knee replacement</option>
+            <option>Hip replacement</option>
+            <option>Shoulder arthroscopy</option>
+            <option>ACL reconstruction</option>
+            <option>Other / second opinion</option>
+          </select>
+          <textarea name="history" placeholder="Brief medical history / goals" class="md:col-span-2 px-4 py-3 rounded-xl bg-white text-slate-900" rows="4"></textarea>
+          <button class="md:col-span-2 px-5 py-3 rounded-xl text-slate-900 font-medium hover:opacity-90" style="background:#1AAE9F;">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<footer>© <span id="y"></span> Orthopediabogota. All rights reserved.</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 p-4 text-center text-sm text-slate-500">
+    © <span id="y"></span> Orthopediabogota. All rights reserved.
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
